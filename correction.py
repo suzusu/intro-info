@@ -2,48 +2,53 @@
 Sujet :
 
 Exercice 1 :
-Afficher les nombres pairs de 4 à 16 avec une boucle.
+Afficher les nombres impairs de 7 à 13 avec une boucle.
 
 Exercice 2 :
-Définir une liste contenant les noms des jours de la semaine. Afficher le troisième élement de la liste (c’est-à-dire Mercredi).
+Définir une liste contenant les chiffres romains de 1 à 10. Afficher l’élément III.
 
 Exercice 3 :
-Définir un dictionnaire qui associe à chaque mois le nombre de jours. Afficher le nombre de jours pour Décembre.
+Définir un dictionnaire qui associe à chaque jour de la semaine, s’il fait partie du week-end ou non. En utilisant ce dictionnaire, déterminer si jeudi fait partie du week-end.
 
 Exercice 4 :
 Télécharger la page www.wikipedia.fr. Afficher le message “erreur du serveur” si le code d’erreur est supérieur ou égal à 500.
+
 """
 
 # Exercice 1
 
-for compteur in range(4, 17, 2):
+for compteur in range(7, 14):
+    if compteur % 2 == 1:
+        print(compteur)
+
+for compteur in range(7, 14, 2):
     print(compteur)
 
 # Exercice 2
 
-liste_jours = ['Lundi', 'Mardi', 'Mercredi',
-    'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']
+liste_nombres = [
+    'I', 'II', 'III', 'IV', 'V',
+    'VI', 'VII', 'VIII', 'IX', 'X',
+]
 
-print(liste_jours[2])
+print(liste_nombres[2])
 
 # Exercice 3
 
-nb_jours_mois = {
-    'Janvier': 31,
-    'Février': 28,
-    'Mars': 31,
-    'Avril': 30,
-    'Mai': 31,
-    'Juin': 30,
-    'Juillet': 31,
-    'Août': 31,
-    'Septembre': 30,
-    'Octobre': 31,
-    'Novembre': 30,
-    'Décembre': 31,
+fait_partie_du_week_end = {
+    'lundi': False,
+    'mardi': False,
+    'mercredi': False,
+    'jeudi': False,
+    'vendredi': False,
+    'samedi': True,
+    'dimanche': True,
 }
 
-print(nb_jours_mois['Décembre'])
+if fait_partie_du_week_end['jeudi']:
+    print('Jeudi est un jour du week-end')
+else:
+    print("Jeudi n'est pas un jour du week-end")
 
 # Exercice 4
 
